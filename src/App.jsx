@@ -1,35 +1,42 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import viteLogo from '/vite.svg'
-import './App.css'
+import Sidebar from './components/Sidebar/Sidebar.jsx';
+import './App.css';
+
+import ProfilePage from './pages/ProfilePage.jsx';
+import EventsPage from './pages/EventsPage.jsx';
+import TechniquesPage from './pages/TechniquesPage.jsx';
+import ClubsPage from './pages/ClubsPage.jsx';
+import GroupsPage from './pages/GroupsPage.jsx';
+import LogPage from './pages/LogPage.jsx';
+import MembersPage from './pages/MembersPage.jsx';
+import SeminarsPage from './pages/SeminarsPage.jsx';
+import StatisticsPage from './pages/StatisticsPage.jsx';
+
 
 function App() {
-  const [count, setCount] = useState(0)
+    return (
+        <div className='layout'>
+            <Sidebar />
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+            <main className="content">
+                <Routes>
+                    <Route path="/" element={<Navigate to="/profile" replace />} />
+                    <Route path="/profile" element={<ProfilePage />} />
+                    <Route path="/events" element={<EventsPage />} />
+                    <Route path="/techniques" element={<TechniquesPage />} />
+                    <Route path="/clubs" element={<ClubsPage />} />
+                    <Route path="/groups" element={<GroupsPage />} />
+                    <Route path="/log" element={<LogPage />} />
+                    <Route path="/members" element={<MembersPage />} />
+                    <Route path="/seminars" element={<SeminarsPage />} />
+                    <Route path="/statistics" element={<StatisticsPage />} />
+                    <Route path="*" element={<h1>404</h1>} />
+                </Routes>
+            </main>
+        </div>
+    );
 }
 
 export default App

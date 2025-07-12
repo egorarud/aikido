@@ -3,7 +3,7 @@ import { useState } from "react";
 function Clubs() {
   return (
     <>
-      <h1 data-oid="05vq.f3">Клубы</h1>
+      <h1 data-oid="8hzk0zn">Клубы</h1>
     </>
   );
 }

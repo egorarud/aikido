@@ -5,7 +5,7 @@ import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter data-oid="7dz0pyk">
-    <App data-oid="pq1m2en" />
+  <BrowserRouter data-oid="27qszlr">
+    <App data-oid="3c:880h" />
   </BrowserRouter>,
 );

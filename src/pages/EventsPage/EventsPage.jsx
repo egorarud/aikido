@@ -107,80 +107,80 @@ function EventsPage() {
   ];
 
   return (
-    <div className="page" data-oid="apgaasg">
-      <h1 className="page-title" data-oid="9314-ie">
+    <div className="page" data-oid="gxey.mr">
+      <h1 className="page-title" data-oid="r74bkyd">
         Мероприятия
       </h1>
 
-      <div className="events-layout" data-oid="sishckh">
-        <div className="events-sidebar" data-oid="rs-n6-5">
+      <div className="events-layout" data-oid="n.f7u:u">
+        <div className="events-sidebar" data-oid="sq6pfv6">
           {events.map((event, index) => (
             <div
               key={event.id}
               className={`event-item ${selectedEvent === index ? "active" : ""}`}
               onClick={() => setSelectedEvent(index)}
-              data-oid=".gu8--n"
+              data-oid="lf-eu7s"
             >
-              <h3 className="event-item-title" data-oid="gfg81vs">
+              <h3 className="event-item-title" data-oid="848dql-">
                 {event.title}
               </h3>
-              <p className="event-item-date" data-oid=".0sbwdx">
+              <p className="event-item-date" data-oid="hko_5j2">
                 {event.date}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="events-content" data-oid="il71zjx">
-          <EventCard event={events[selectedEvent]} data-oid="23pz78b" />
+        <div className="events-content" data-oid="x9y:.4k">
+          <EventCard event={events[selectedEvent]} data-oid="wipz_jy" />
         </div>
 
-        <div className="events-info" data-oid="v_itb6-">
-          <div className="event-info-section" data-oid="ggw4.72">
-            <h3 className="info-title" data-oid="adcotp8">
+        <div className="events-info" data-oid="jp_o36t">
+          <div className="event-info-section" data-oid="yblhkz5">
+            <h3 className="info-title" data-oid="plcagnl">
               Информация
             </h3>
-            <div className="info-item" data-oid="cazoob0">
-              <span className="info-label" data-oid="g4to2to">
+            <div className="info-item" data-oid="xrf1w9t">
+              <span className="info-label" data-oid="4-gsx:l">
                 Создатель
               </span>
-              <div className="creator-info" data-oid="owq4fgl">
-                <div className="creator-avatar" data-oid="hwpth.y"></div>
-                <span className="creator-name" data-oid=".f2yi8f">
+              <div className="creator-info" data-oid="y26h5r9">
+                <div className="creator-avatar" data-oid="9m.-ghj"></div>
+                <span className="creator-name" data-oid="zyqs5dh">
                   {events[selectedEvent].creator}
                 </span>
               </div>
             </div>
-            <div className="info-item" data-oid="eo:ac6f">
-              <span className="info-label" data-oid="d8wnto-">
+            <div className="info-item" data-oid="c0_rxxm">
+              <span className="info-label" data-oid="wht46:y">
                 Город
               </span>
-              <span className="info-value" data-oid="3yyc27h">
+              <span className="info-value" data-oid="aim3x:_">
                 {events[selectedEvent].city}
               </span>
             </div>
-            <div className="info-item" data-oid="b2l--fe">
-              <span className="info-label" data-oid="n4tl7o1">
+            <div className="info-item" data-oid="xha0kcq">
+              <span className="info-label" data-oid="14zr0ts">
                 Дата проведения
               </span>
-              <span className="info-value" data-oid="mz.nl5c">
+              <span className="info-value" data-oid="c2xx.:i">
                 {events[selectedEvent].eventDate}
               </span>
             </div>
-            <div className="info-item" data-oid="8a3uu3f">
-              <span className="info-label" data-oid="vqy8t8y">
+            <div className="info-item" data-oid="3fq042e">
+              <span className="info-label" data-oid="v:x6px0">
                 До начала
               </span>
-              <div className="time-left" data-oid="fg83e4w">
-                <div className="time-circle" data-oid="jj-gnos">
-                  <span className="time-text" data-oid="6aq8k7d">
+              <div className="time-left" data-oid="h6y11i_">
+                <div className="time-circle" data-oid="gsok498">
+                  <span className="time-text" data-oid="q526gno">
                     {events[selectedEvent].timeLeft}
                   </span>
                 </div>
               </div>
             </div>
-            <div className="info-item" data-oid="3co-non">
-              <span className="info-created" data-oid=":0:tq6w">
+            <div className="info-item" data-oid="ghaqz:7">
+              <span className="info-created" data-oid="w-5-a:q">
                 {events[selectedEvent].createdDate}
               </span>
             </div>

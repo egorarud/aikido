@@ -13,17 +13,17 @@ function Sidebar() {
   ];
 
   return (
-    <div className="sidebar" data-oid="tfyux1d">
+    <div className="sidebar w-[200px]" data-oid="uur9dxq">
       <img
         className="sidebar__logo"
         src="./src/assets/logo.svg"
         alt="федерация айкидо"
-        data-oid="d0v1l8i"
+        data-oid="tk..y-p"
       />
 
-      <ul className="sidebar__list" data-oid="enwz2.5">
+      <ul className="sidebar__list" data-oid="-76.e53">
         {pages.map(({ to, label, icon }) => (
-          <li key={to} className="sidebar__item--wrapper" data-oid="0bgl_1e">
+          <li key={to} className="sidebar__item--wrapper" data-oid="_54v2tx">
             <NavLink
               to={to}
               className={({ isActive }) =>
@@ -31,13 +31,13 @@ function Sidebar() {
                   ? "sidebar__item sidebar__item--active"
                   : "sidebar__item"
               }
-              data-oid="_60kd1y"
+              data-oid="m6zyw1t"
             >
               <img
                 className="sidebar__item__image"
                 src={`../src/assets/sidebar/${icon}`}
                 alt={label}
-                data-oid="ob4w6df"
+                data-oid="nphlw3i"
               />
 
               {label}

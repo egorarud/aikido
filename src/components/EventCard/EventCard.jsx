@@ -5,48 +5,48 @@ function EventCard({ event }) {
   if (!event) return null;
 
   return (
-    <div className="event-card" data-oid="75pfnv1">
-      <h2 className="event-title" data-oid="apia8hd">
+    <div className="event-card" data-oid="p9nad3g">
+      <h2 className="event-title" data-oid="0iu5lzm">
         {event.details.title}
       </h2>
 
-      <div className="event-section" data-oid="snhlfj0">
-        <p className="event-instructor" data-oid="yp.rxlq">
+      <div className="event-section" data-oid="ww5__8y">
+        <p className="event-instructor" data-oid="qogbm3o">
           {event.details.instructor}
         </p>
         {event.details.instructorTitle && (
-          <p className="event-instructor-title" data-oid="l1ytuc7">
+          <p className="event-instructor-title" data-oid="twtrkix">
             {event.details.instructorTitle}
           </p>
         )}
       </div>
 
-      <div className="event-section" data-oid="7izi1:d">
-        <p className="event-location" data-oid="m0ak20i">
+      <div className="event-section" data-oid="0l32vtb">
+        <p className="event-location" data-oid="7kw5s-g">
           {event.details.location}
         </p>
       </div>
 
-      <div className="event-section" data-oid="-_u63zj">
-        <h3 className="event-section-title" data-oid="36sw4ov">
+      <div className="event-section" data-oid="x93q8_6">
+        <h3 className="event-section-title" data-oid="eef3yzp">
           Расписание:
         </h3>
-        <div className="event-schedule" data-oid="z8kkcib">
+        <div className="event-schedule" data-oid="4q7j20:">
           {event.details.schedule.map((item, index) => (
-            <p key={index} className="schedule-item" data-oid="-41p3.4">
+            <p key={index} className="schedule-item" data-oid="ys:uiwh">
               {item}
             </p>
           ))}
         </div>
       </div>
 
-      <div className="event-section" data-oid="k7exmvh">
-        <h3 className="event-section-title" data-oid="5mivl_f">
+      <div className="event-section" data-oid="hv:8p7h">
+        <h3 className="event-section-title" data-oid="qrz35pq">
           Стоимость:
         </h3>
-        <div className="event-cost" data-oid="-pb8k:7">
+        <div className="event-cost" data-oid="62j7_3u">
           {event.details.cost.map((item, index) => (
-            <p key={index} className="cost-item" data-oid="4:0ocu5">
+            <p key={index} className="cost-item" data-oid="tze04e0">
               {item}
             </p>
           ))}
@@ -54,13 +54,13 @@ function EventCard({ event }) {
       </div>
 
       {event.details.contacts && (
-        <div className="event-section" data-oid="_2d07rw">
-          <h3 className="event-section-title" data-oid="gqpain9">
+        <div className="event-section" data-oid="8dmp50y">
+          <h3 className="event-section-title" data-oid="1i:e0o4">
             Официальные контакты:
           </h3>
-          <div className="event-contacts" data-oid="g7v1lwx">
+          <div className="event-contacts" data-oid="t7rtmzy">
             {event.details.contacts.map((contact, index) => (
-              <p key={index} className="contact-item" data-oid="rvaudv7">
+              <p key={index} className="contact-item" data-oid=":coi8ls">
                 {contact}
               </p>
             ))}
@@ -69,12 +69,12 @@ function EventCard({ event }) {
       )}
 
       {event.details.attachment && (
-        <div className="event-section" data-oid="mokkve9">
-          <div className="event-attachment" data-oid="t1ge_:7">
-            <span className="attachment-icon" data-oid="3ixq4xg">
+        <div className="event-section" data-oid="1-8:jlw">
+          <div className="event-attachment" data-oid="bea3wdy">
+            <span className="attachment-icon" data-oid="di-mojz">
               📎
             </span>
-            <a href="#" className="attachment-link" data-oid="szbmx0s">
+            <a href="#" className="attachment-link" data-oid="n9vm..s">
               {event.details.attachment}
             </a>
           </div>

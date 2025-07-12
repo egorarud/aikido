@@ -3,7 +3,7 @@ import { useState } from "react";
 function Seminars() {
   return (
     <>
-      <h1 data-oid="sn437he">Семинары</h1>
+      <h1 data-oid="ab2u15n">Семинары</h1>
     </>
   );
 }

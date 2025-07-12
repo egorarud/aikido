@@ -32,46 +32,46 @@ function Profile() {
 
   return (
     <>
-      <h1 className="profile__header" data-oid=":.jvqir">
+      <h1 className="profile__header" data-oid="td_3r6g">
         Профиль
       </h1>
-      <div className="profile" data-oid="iesnmhm">
-        <div className="profile__card data" data-oid="::r5b39">
-          <div className="profile__data" data-oid="tvmjvsm">
-            <div className="profile__photo" data-oid=".ir-o.a">
+      <div className="profile" data-oid="rz3a0sd">
+        <div className="profile__card data" data-oid="d9.6_wy">
+          <div className="profile__data" data-oid="qxdjwae">
+            <div className="profile__photo" data-oid="l:-j69f">
               <img
                 className="profile__photo__img"
                 src={profilePhoto}
                 alt="Фото"
-                data-oid="yoha440"
+                data-oid="b8pvgh0"
               ></img>
             </div>
-            <div className="profile__nameRole" data-oid="itp-1a:">
-              <p className="profile__name" data-oid="0.ivovs">
+            <div className="profile__nameRole" data-oid="qyc297d">
+              <p className="profile__name" data-oid="-c7xql6">
                 {profileData.fullName}
               </p>
-              <p className="profile__role" data-oid="3du8fgt">
+              <p className="profile__role" data-oid="wb:xmxg">
                 {profileData.role}
               </p>
             </div>
           </div>
         </div>
-        <div className="profile__card mainInfo" data-oid="4v9lai8">
-          <p className="profile__card__title" data-oid="lk56t:z">
+        <div className="profile__card mainInfo" data-oid="dc_ldnx">
+          <p className="profile__card__title" data-oid="lcvi3i8">
             Основная информация
           </p>
-          <div className="profile__card__items" data-oid="x-2yq.f">
+          <div className="profile__card__items" data-oid="41.7c:c">
             {mainInfoItems.map((item, index) => (
               <div
                 key={index}
                 className="profile__card__item"
-                data-oid="ta44z5o"
+                data-oid="-oe.0-t"
               >
-                <p className="item__title" data-oid="80rqncf">
+                <p className="item__title" data-oid="dp5x8uq">
                   {item.title}
                 </p>
-                <div className="item__content" data-oid="-ysb0-w">
-                  <p className="item__content-value" data-oid="btt4244">
+                <div className="item__content" data-oid="beo8-vi">
+                  <p className="item__content-value" data-oid="4xewnfu">
                     {item.value}
                   </p>
                   {item.title === "Дата рождения" && (
@@ -79,7 +79,7 @@ function Profile() {
                       className="dateOfBirth__img"
                       src={calendarIcon}
                       alt="Дата рождения"
-                      data-oid=":y2xz7n"
+                      data-oid="cv0uc84"
                     />
                   )}
                   {item.title === "Город" && (
@@ -87,7 +87,7 @@ function Profile() {
                       className="city__img"
                       src={locationIcon}
                       alt="Город"
-                      data-oid="3tkrmoq"
+                      data-oid="l77a-.c"
                     />
                   )}
                 </div>
@@ -95,22 +95,22 @@ function Profile() {
             ))}
           </div>
         </div>
-        <div className="profile__card rankInfo" data-oid="4ymo5ck">
-          <p className="profile__card__title" data-oid="jjvxm8m">
+        <div className="profile__card rankInfo" data-oid="odh.x_6">
+          <p className="profile__card__title" data-oid="kmdghiq">
             Информация о ранге
           </p>
-          <div className="profile__card__items rank" data-oid="6sy5u_8">
+          <div className="profile__card__items rank" data-oid="9::.ct:">
             {rankInfoItems.map((item, index) => (
               <div
                 key={index}
                 className="profile__card__item"
-                data-oid="iuzc7cc"
+                data-oid="y4:_.o2"
               >
-                <p className="item__title" data-oid="vqc1yr4">
+                <p className="item__title" data-oid="s20_j8.">
                   {item.title}
                 </p>
-                <div className="item__content" data-oid="2gr8emn">
-                  <p className="item__content-value" data-oid="e-62212">
+                <div className="item__content" data-oid="tmjm_q1">
+                  <p className="item__content-value" data-oid="hkn:367">
                     {item.value}
                   </p>
                   {item.title === "Дата аттестации" && (
@@ -118,28 +118,28 @@ function Profile() {
                       className="attestationDate__img"
                       src={calendarIcon}
                       alt="Дата аттестации"
-                      data-oid="xbss4y8"
+                      data-oid="k692kfn"
                     />
                   )}
                 </div>
               </div>
             ))}
           </div>
-          <p className="profile__card__title" data-oid="88kk-1g">
+          <p className="profile__card__title" data-oid="shud_ti">
             Данные родителя
           </p>
-          <div className="profile__card__items rank" data-oid="7abx2e6">
+          <div className="profile__card__items rank" data-oid="n8a43-a">
             {parentsInfoItems.map((item, index) => (
               <div
                 key={index}
                 className="profile__card__item"
-                data-oid="gvrw9ac"
+                data-oid="rrnci5f"
               >
-                <p className="item__title" data-oid=".pq5b3r">
+                <p className="item__title" data-oid="8e-csfg">
                   {item.title}
                 </p>
-                <div className="item__content" data-oid="tu2.h-q">
-                  <p className="item__content-value" data-oid="56_uqya">
+                <div className="item__content" data-oid="m6egphe">
+                  <p className="item__content-value" data-oid="hhqkrs3">
                     {item.value}
                   </p>
                 </div>

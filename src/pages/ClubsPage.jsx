@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 function Clubs() {
-    return (
-        <>
-            <h1>Клубы</h1>
-        </>
-    );
+  return (
+    <>
+      <h1 data-oid="05vq.f3">Клубы</h1>
+    </>
+  );
 }
 
-export default Clubs
+export default Clubs;

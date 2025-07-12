@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 function Seminars() {
-    return (
-        <>
-            <h1>Семинары</h1>
-        </>
-    );
+  return (
+    <>
+      <h1 data-oid="sn437he">Семинары</h1>
+    </>
+  );
 }
 
-export default Seminars
+export default Seminars;

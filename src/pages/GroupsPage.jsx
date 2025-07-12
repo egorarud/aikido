@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 function Groups() {
-    return (
-        <>
-            <h1>Группы</h1>
-        </>
-    );
+  return (
+    <>
+      <h1 data-oid="gebyn6_">Группы</h1>
+    </>
+  );
 }
 
-export default Groups
+export default Groups;

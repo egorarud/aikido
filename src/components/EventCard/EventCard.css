@@ -1,0 +1,94 @@
+.event-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.event-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.event-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.event-instructor {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.event-instructor-title {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.event-location {
+  font-size: 14px;
+  color: #1a1a1a;
+  margin: 0;
+  font-weight: 500;
+}
+
+.event-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.event-schedule,
+.event-cost,
+.event-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-left: 16px;
+}
+
+.schedule-item,
+.cost-item,
+.contact-item {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.cost-item {
+  font-family: 'Courier New', monospace;
+}
+
+.event-attachment {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.attachment-icon {
+  font-size: 16px;
+}
+
+.attachment-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.attachment-link:hover {
+  text-decoration: underline;
+}
+

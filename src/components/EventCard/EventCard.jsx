@@ -1,80 +1,74 @@
 import React from "react";
 import "./EventCard.css";
+import deleteIcon from "../../assets/delete.svg";
 
-function EventCard({ event }) {
+function EventCard({ event, onDelete }) {
   if (!event) return null;
 
   return (
-    <div className="event-card" data-oid="p9nad3g">
-      <h2 className="event-title" data-oid="0iu5lzm">
-        {event.details.title}
-      </h2>
-
-      <div className="event-section" data-oid="ww5__8y">
-        <p className="event-instructor" data-oid="qogbm3o">
-          {event.details.instructor}
-        </p>
+    <div className="event-card">
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+        <h2 className="event-title">{event.details.title}</h2>
+        {onDelete && (
+          <button
+            className="event-delete-btn"
+            onClick={onDelete}
+            style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+            title="Удалить мероприятие"
+          >
+            <img src={deleteIcon} alt="Удалить" style={{ width: 24, height: 24 }} />
+          </button>
+        )}
+      </div>
+      <div className="event-section">
+        <p className="event-instructor">{event.details.instructor}</p>
         {event.details.instructorTitle && (
-          <p className="event-instructor-title" data-oid="twtrkix">
+          <p className="event-instructor-title">
             {event.details.instructorTitle}
           </p>
         )}
       </div>
-
-      <div className="event-section" data-oid="0l32vtb">
-        <p className="event-location" data-oid="7kw5s-g">
-          {event.details.location}
-        </p>
+      <div className="event-section">
+        <h3 className="event-section-title">Место проведения:</h3>
+        <p className="event-location">{event.details.location}</p>
       </div>
-
-      <div className="event-section" data-oid="x93q8_6">
-        <h3 className="event-section-title" data-oid="eef3yzp">
-          Расписание:
-        </h3>
-        <div className="event-schedule" data-oid="4q7j20:">
+      <div className="event-section">
+        <h3 className="event-section-title">Расписание:</h3>
+        <div className="event-schedule">
           {event.details.schedule.map((item, index) => (
-            <p key={index} className="schedule-item" data-oid="ys:uiwh">
+            <p key={index} className="schedule-item">
               {item}
             </p>
           ))}
         </div>
       </div>
-
-      <div className="event-section" data-oid="hv:8p7h">
-        <h3 className="event-section-title" data-oid="qrz35pq">
-          Стоимость:
-        </h3>
-        <div className="event-cost" data-oid="62j7_3u">
+      <div className="event-section">
+        <h3 className="event-section-title">Стоимость:</h3>
+        <div className="event-cost">
           {event.details.cost.map((item, index) => (
-            <p key={index} className="cost-item" data-oid="tze04e0">
+            <p key={index} className="cost-item">
               {item}
             </p>
           ))}
         </div>
       </div>
-
       {event.details.contacts && (
-        <div className="event-section" data-oid="8dmp50y">
-          <h3 className="event-section-title" data-oid="1i:e0o4">
-            Официальные контакты:
-          </h3>
-          <div className="event-contacts" data-oid="t7rtmzy">
+        <div className="event-section">
+          <h3 className="event-section-title">Официальные контакты:</h3>
+          <div className="event-contacts">
             {event.details.contacts.map((contact, index) => (
-              <p key={index} className="contact-item" data-oid=":coi8ls">
+              <p key={index} className="contact-item">
                 {contact}
               </p>
             ))}
           </div>
         </div>
       )}
-
       {event.details.attachment && (
-        <div className="event-section" data-oid="1-8:jlw">
-          <div className="event-attachment" data-oid="bea3wdy">
-            <span className="attachment-icon" data-oid="di-mojz">
-              📎
-            </span>
-            <a href="#" className="attachment-link" data-oid="n9vm..s">
+        <div className="event-section">
+          <div className="event-attachment">
+            <span className="attachment-icon">📎</span>
+            <a href="#" className="attachment-link">
               {event.details.attachment}
             </a>
           </div>

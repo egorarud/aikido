@@ -6,83 +6,84 @@ import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import EventsPage from "./pages/EventsPage/EventsPage";
 import TechniquesPage from "./pages/TechniquesPage/TechniquesPage";
 import ClubsPage from "./pages/ClubsPage.jsx";
+import EventPageHead from "./pages/Head/EventPage/EventPage.jsx";
 import GroupsPage from "./pages/GroupsPage.jsx";
-import LogPage from "./pages/LogPage.jsx";
+import LogPage from "./pages/LogPage/LogPage.jsx";
 import MembersPage from "./pages/MembersPage.jsx";
 import SeminarsPage from "./pages/SeminarsPage.jsx";
 import StatisticsPage from "./pages/StatisticsPage.jsx";
 
 function App() {
   return (
-    <div className="layout" data-oid="xxgmn-5">
-      <Sidebar data-oid="jfy9l9." />
+    <div className="layout" data-oid="ju.zls8">
+      <Sidebar data-oid="45v3lac" />
 
-      <main className="content" data-oid="1o73545">
-        <Routes data-oid="sg_42re">
+      <main className="content" data-oid="7r:2wn_">
+        <Routes data-oid="10r2e4t">
           <Route
             path="/"
-            element={<Navigate to="/profile" replace data-oid="-pwu40-" />}
-            data-oid="byk5v6."
+            element={<Navigate to="/profile" replace data-oid="z:hy9l6" />}
+            data-oid="d0ge9p-"
           />
 
           <Route
             path="/profile"
-            element={<ProfilePage data-oid="hkjgk3y" />}
-            data-oid="06ikep1"
+            element={<ProfilePage data-oid="0jdx.qd" />}
+            data-oid="vmrefm7"
           />
 
           <Route
             path="/events"
-            element={<EventsPage data-oid="_:-e2ut" />}
-            data-oid="oanod9g"
+            element={<EventsPage data-oid="nr.ewkz" />}
+            data-oid="l.s:s11"
           />
 
           <Route
             path="/techniques"
-            element={<TechniquesPage data-oid="eqyp7sd" />}
-            data-oid="r9egwrc"
+            element={<TechniquesPage data-oid="0qkid9a" />}
+            data-oid="mqyc36h"
           />
 
           <Route
             path="/clubs"
-            element={<ClubsPage data-oid="oq_eir8" />}
-            data-oid="a4qiw39"
+            element={<EventPageHead />}
+            data-oid="..60u85"
           />
 
           <Route
             path="/groups"
-            element={<GroupsPage data-oid="k:4q9wu" />}
-            data-oid="yr090ol"
+            element={<GroupsPage data-oid="yn.6wdv" />}
+            data-oid="_u30o9:"
           />
 
           <Route
             path="/log"
-            element={<LogPage data-oid="1go5e_h" />}
-            data-oid="6:ir2l6"
+            element={<LogPage data-oid="-w0hre_" />}
+            data-oid="37pkthr"
           />
 
           <Route
             path="/members"
-            element={<MembersPage data-oid="fs::up1" />}
-            data-oid="41rri12"
+            element={<MembersPage data-oid="t3msc2v" />}
+            data-oid="88fzm4d"
           />
 
           <Route
             path="/seminars"
-            element={<SeminarsPage data-oid="s4-9qao" />}
-            data-oid="-nrd3ej"
+            element={<SeminarsPage data-oid="_uck3fj" />}
+            data-oid="bc5yjcf"
           />
 
           <Route
             path="/statistics"
-            element={<StatisticsPage data-oid="e9_793_" />}
-            data-oid="2ll_:7s"
+            element={<StatisticsPage data-oid="98jp6ho" />}
+            data-oid="-4rda63"
           />
 
           <Route
             path="*"
-            element={<h1 data-oid="___5pe3">404</h1>}
-            data-oid="pidakre"
+            element={<h1 data-oid="wi66r.m">404</h1>}
+            data-oid="8bs-st5"
           />
         </Routes>
       </main>

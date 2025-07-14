@@ -17,17 +17,13 @@ function VideoModal({ videoLink, closeModal }) {
 
   return (
     <>
-      <div className="video__modal" data-oid="nf-rbc9">
-        <button
-          className="close__video__button"
-          onClick={closeModal}
-          data-oid="3:bhw5:"
-        >
+      <div className="video__modal">
+        <button className="close__video__button" onClick={closeModal}>
           x
         </button>
-        <div className="video__content" data-oid="lhq6i_q">
-          <video className="technique__video" controls data-oid="gp9ou7s">
-            <source src={videoLink} type="video/mp4" data-oid="at8mcxp" />
+        <div className="video__content">
+          <video className="technique__video" controls>
+            <source src={videoLink} type="video/mp4" />
           </video>
         </div>
       </div>

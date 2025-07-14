@@ -1,0 +1,456 @@
+/* Стили из EventsPage.css */
+.events-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.page-title {
+  text-align: left;
+}
+
+.events-sidebar {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.event-item {
+  padding: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.event-item:hover {
+  background-color: #e9ecef;
+}
+
+.event-item.active {
+  background-color: white;
+  border-left-color: #2563eb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-item-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 4px 0;
+}
+
+.event-item-date {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+.events-content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  overflow-y: auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.events-info {
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.event-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.info-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info-label {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.info-value {
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.creator-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.creator-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #e9ecef;
+}
+
+.creator-name {
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.time-left {
+  display: flex;
+  justify-content: center;
+}
+
+.time-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #f0f9ff;
+  border: 2px solid #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: #2563eb;
+  text-align: center;
+}
+
+.info-created {
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.left_block {
+  width: 265px;
+  min-width: 265px;
+  max-width: 265px;
+  background: white;
+  border-radius: 24px;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  max-height: 592px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.events-content {
+  width: 560px;
+  min-width: 560px;
+  max-width: 560px;
+  background-color: white;
+  border-radius: 24px;
+  padding: 30px;
+  overflow-y: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+}
+
+.events-info {
+  width: 265px;
+  min-width: 265px;
+  max-width: 265px;
+  background-color: white;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.event-title, .event-section-title, .event-instructor {
+  font-family: 'Nunito Sans', NunitoSans, Arial, sans-serif;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  margin: 0 0 8px 0;
+}
+
+.event-section, .event-instructor-title, .event-location, .event-schedule, .event-cost, .event-contacts, .schedule-item, .cost-item, .contact-item {
+  font-family: 'Nunito Sans', NunitoSans, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  margin: 0;
+}
+
+/* Стили из EventCard.css */
+.event-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.event-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  text-align: left;
+}
+
+.event-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.event-instructor {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  text-align: left;
+}
+
+.event-instructor-title {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.event-location {
+  font-size: 14px;
+  color: #1a1a1a;
+  margin: 0;
+  font-weight: 500;
+  text-align: left;
+}
+
+.event-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  text-align: left;
+}
+
+.event-schedule,
+.event-cost,
+.event-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-left: 16px;
+  text-align: left;
+}
+
+.schedule-item,
+.cost-item,
+.contact-item {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.cost-item {
+  font-family: 'Courier New', monospace;
+}
+
+.event-attachment {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.attachment-icon {
+  font-size: 16px;
+}
+
+.attachment-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.attachment-link:hover {
+  text-decoration: underline;
+}
+
+/* Стили для модальной формы создания мероприятия */
+/* Оверлей для модального окна */
+.add-task-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(121, 145, 173, 0.10);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.add-task-modal {
+  width: 584px;
+  height: 660px;
+  background: #FFFFFF;
+  box-shadow: 0px 6px 58px rgba(121, 145, 173, 0.20);
+  border-radius: 24px;
+  z-index: 1001;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: auto;
+  position: static;
+}
+
+.add-task-close-btn {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  left: 30px;
+  top: 30px;
+  background: #F4F9FD;
+  border-radius: 14px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.04);
+  z-index: 2;
+}
+
+.add-task-close-btn span {
+  font-size: 24px;
+  color: #0A1629;
+  line-height: 1;
+}
+
+.add-task-title {
+  margin-top: 48px;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 30px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #0A1629;
+  text-align: left;
+  padding-left: 60px;
+}
+
+.add-task-form {
+  width: 464px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background: transparent;
+  padding: 0;
+  position: static;
+}
+
+.add-task-font {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #7D8592;
+}
+
+.add-task-input-label {
+  composes: add-task-font;
+  margin-bottom: 8px;
+  text-align: left;
+  display: block;
+}
+
+.add-task-fields-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 0;
+}
+
+.add-task-field-col {
+  display: flex;
+  flex-direction: column;
+  width: 224px;
+}
+
+.add-task-input, .add-task-select {
+  width: 224px;
+  height: 50px;
+  font-size: 16px;
+  border-radius: 14px;
+  margin-bottom: 0;
+}
+
+.add-task-input-full {
+  width: 464px;
+  height: 50px;
+  font-size: 16px;
+  border-radius: 14px;
+  margin-bottom: 0;
+}
+
+.add-task-textarea {
+  width: 464px;
+  height: 120px;
+  font-size: 16px;
+  border-radius: 14px;
+  resize: none;
+}
+
+.add-task-attach-btn {
+  margin-top: 8px;
+  margin-bottom: 0;
+  width: 180px;
+  height: 44px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.add-task-save-btn {
+  width: 120px;
+  height: 48px;
+  font-size: 16px;
+  border-radius: 12px;
+  position: absolute;
+  left: 65px;
+  bottom: 35px;
+  margin-left: 0;
+  margin-top: 0;
+}

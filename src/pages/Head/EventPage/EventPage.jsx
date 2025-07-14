@@ -1,31 +1,16 @@
 import React, { useState } from "react";
-import EventCard from "../../components/EventCard/EventCard";
-import "./EventsPage.css";
+import EventCard from "../../../components/EventCard/EventCard";
+import "./EventPage.css";
+import ModalCreateEvent from "./ModalCreateEvent";
 
 function parseRussianDate(dateStr) {
-  // Удаляем лишние символы
   dateStr = dateStr.replace(/г\.|года|г\s*|года\s*/gi, '').trim();
-  // Если диапазон дат, берем первую
   if (dateStr.includes("-")) {
-    dateStr = dateStr.split("-").pop().trim(); // берем последнюю дату (обычно она с месяцем и годом)
-    // Например: "15-16 января 2025" -> "16 января 2025"
+    dateStr = dateStr.split("-").pop().trim();
   }
-  // Месяцы на русском
   const months = {
-    января: 0,
-    февраля: 1,
-    марта: 2,
-    апреля: 3,
-    мая: 4,
-    июня: 5,
-    июля: 6,
-    августа: 7,
-    сентября: 8,
-    октября: 9,
-    ноября: 10,
-    декабря: 11,
+    января: 0, февраля: 1, марта: 2, апреля: 3, мая: 4, июня: 5, июля: 6, августа: 7, сентября: 8, октября: 9, ноября: 10, декабря: 11,
   };
-  // Ищем день, месяц, год
   const match = dateStr.match(/(\d{1,2})\s+(\S+)\s+(\d{4})/);
   if (!match) return null;
   const day = parseInt(match[1], 10);
@@ -39,7 +24,6 @@ function getTimeLeft(eventDateStr) {
   const eventDate = parseRussianDate(eventDateStr);
   if (!eventDate) return "Дата не распознана";
   const now = new Date();
-  // Сравниваем только дату (без времени)
   eventDate.setHours(23, 59, 59, 999);
   if (now > eventDate) return "Завершено";
   let diff = eventDate - now;
@@ -55,10 +39,10 @@ function getTimeLeft(eventDateStr) {
   return result.trim();
 }
 
-function EventsPage() {
+function EventPageHead() {
   const [selectedEvent, setSelectedEvent] = useState(0);
-
-  const events = [
+  const [showModal, setShowModal] = useState(false);
+  const [events, setEvents] = useState([
     {
       id: 1,
       title: "Предстоящий семинар",
@@ -75,7 +59,6 @@ function EventsPage() {
           "10:00 ........аттестация дети",
           "13:00.........аттестация взрослые",
         ],
-
         cost: [
           "Семинар....................................3000 Р",
           "годовой взнос.........................1000 Р",
@@ -84,12 +67,10 @@ function EventsPage() {
           "1 кю.............................................3000 Р",
           "черный пояс.............................5000 Р",
         ],
-
         contacts: [
           "Толаев Евгений Николаевич +7 982 648 77 75",
           "Домрачев Дмитрий Олегович +7 912 283 29 77",
         ],
-
         attachment: "положение.pdf",
       },
       creator: "Смирнов Денис",
@@ -98,71 +79,44 @@ function EventsPage() {
       timeLeft: "19д 3ч 25м",
       createdDate: "Создано 28 ноября 2025 г.",
     },
-    {
-      id: 2,
-      title: "Родительское собрание",
-      date: "Создано 20 апреля 2025 г.",
-      details: {
-        title: "Родительское собрание",
-        instructor: "Проводит администрация клуба",
-        location:
-          "ФОК «СОБОЛЬ», ул. Академика Постовского, 11",
-        schedule: ["Суббота, 25 мая 2025 г.", "15:00 - начало собрания"],
-        cost: ["Участие бесплатное"],
-        contacts: ["Администрация +7 982 648 77 75"],
-      },
-      creator: "Администрация",
-      city: "Екатеринбург",
-      eventDate: "25 мая 2026 г.",
-      timeLeft: "Завершено",
-      createdDate: "Создано 20 апреля 2025 г.",
-    },
-    {
-      id: 3,
-      title: "Обсуждение приемов",
-      date: "Создано 14 февраля 2025 г.",
-      details: {
-        title: "Обсуждение приемов",
-        instructor: "Проводит старшая группа",
-        location: "Основной зал",
-        schedule: [
-          "Понедельник, 20 февраля 2025 г.",
-          "18:00 - начало обсуждения",
-        ],
+    // ... другие события ...
+  ]);
 
-        cost: ["Участие бесплатное для учеников"],
-        contacts: ["Старший инструктор +7 982 648 77 75"],
-      },
-      creator: "Инструктор",
-      city: "Екатеринбург",
-      eventDate: "20 февраля 2025 г.",
-      timeLeft: "Завершено",
-      createdDate: "Создано 14 февраля 2025 г.",
-    },
-    {
-      id: 4,
-      title: "Выезд на лыжи",
-      date: "Создано 9 января 2025 г.",
+  const handleCreateEvent = (formData) => {
+    const newEvent = {
+      id: events.length + 1,
+      title: formData.title,
+      date: `Создано ${new Date().toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' })}`,
       details: {
-        title: "Выезд на лыжи",
-        instructor: "Организует клуб",
-        location: "Горнолыжный курорт",
-        schedule: ["Суббота-воскресенье, 15-16 января 2025 г.", "Выезд в 8:00"],
-        cost: ["Участие 2000 Р", "Питание включено"],
-        contacts: ["Организатор +7 982 648 77 75"],
+        title: formData.title,
+        instructor: "-",
+        location: formData.city,
+        schedule: [formData.date],
+        cost: [],
+        contacts: [],
       },
-      creator: "Клуб",
-      city: "Екатеринбург",
-      eventDate: "15-16 января 2025 г.",
-      timeLeft: "Завершено",
-      createdDate: "Создано 9 января 2025 г.",
-    },
-  ];
+      creator: "Вы",
+      city: formData.city,
+      eventDate: formData.date,
+      timeLeft: "-",
+      createdDate: `Создано ${new Date().toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' })}`,
+    };
+    setEvents(prev => [...prev, newEvent]);
+    setSelectedEvent(events.length); // выбрать новое событие
+    setShowModal(false);
+  };
 
   return (
     <div className="page">
       <h1 className="page-title">Мероприятия</h1>
-
+      <button
+        style={{
+          display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '11px 25px 11px 16px', gap: '8px', isolation: 'isolate', position: 'absolute', width: '137px', height: '48px', left: '1263px', top: '20px', background: '#2563eb', color: 'white', border: 'none', borderRadius: '12px', fontWeight: 600, fontSize: '16px', cursor: 'pointer', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
+        }}
+        onClick={() => setShowModal(true)}
+      >
+        + Создать
+      </button>
       <div className="events-layout">
         <div className="left_block">
           <ul className="left_block_ul">
@@ -178,11 +132,15 @@ function EventsPage() {
             ))}
           </ul>
         </div>
-
         <div className="events-content">
-          <EventCard event={events[selectedEvent]} />
+          <EventCard 
+            event={events[selectedEvent]} 
+            onDelete={() => {
+              setEvents(prev => prev.filter((_, idx) => idx !== selectedEvent));
+              setSelectedEvent(prev => prev > 0 ? prev - 1 : 0);
+            }}
+          />
         </div>
-
         <div className="events-info">
           <div className="event-info-section">
             <h3 className="info-title">Информация</h3>
@@ -223,8 +181,9 @@ function EventsPage() {
           </div>
         </div>
       </div>
+      <ModalCreateEvent show={showModal} onClose={() => setShowModal(false)} onSubmit={handleCreateEvent} />
     </div>
   );
 }
 
-export default EventsPage;
+export default EventPageHead;

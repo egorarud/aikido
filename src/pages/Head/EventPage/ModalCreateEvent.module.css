@@ -1,0 +1,185 @@
+/* Стили для модального окна создания мероприятия */
+.add-task-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(121, 145, 173, 0.10);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.add-task-modal {
+  width: 464px;
+  padding: 60px;
+  background: #FFFFFF;
+  box-shadow: 0px 6px 58px rgba(121, 145, 173, 0.20);
+  border-radius: 24px;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+  margin: auto;
+  position: relative;
+  color: #0A1629;
+  font-family: 'Nunito Sans', NunitoSans, Arial, sans-serif;
+}
+
+.add-task-close-btn {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  right: 30px;
+  top: 30px;
+  background: #F4F9FD;
+  border-radius: 14px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.04);
+  z-index: 2;
+}
+
+.add-task-close-btn span {
+  font-size: 24px;
+  color: #0A1629;
+  line-height: 1;
+}
+
+.add-task-title {
+    font-family: 'Nunito Sans', NunitoSans, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    leading-trim: NONE;
+    line-height: 100%;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 30px;   
+}
+
+.add-task-form {
+  width: 464px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background: transparent;
+  padding: 0;
+  position: static;
+}
+
+.add-task-font {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #7D8592;
+}
+
+.add-task-input-label {
+  composes: add-task-font;
+  margin-bottom: 8px;
+  text-align: left;
+  display: block;
+}
+
+.add-task-fields-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 0;
+}
+
+.add-task-field-col {
+  display: flex;
+  flex-direction: column;
+  width: 224px;
+}
+
+.add-task-input, .add-task-select {
+  width: 224px;
+  height: 50px;
+  font-size: 16px;
+  border-radius: 14px;
+  margin-bottom: 0;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #D8E0F0;
+  box-shadow: 0px 1px 2px rgba(184, 200, 224, 0.22);
+  font-family: 'Nunito Sans', sans-serif;
+  color: #0A1629;
+  padding: 12px 18px;
+}
+
+.add-task-input-full {
+  width: 464px;
+  height: 50px;
+  font-size: 16px;
+  border-radius: 14px;
+  margin-bottom: 0;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #D8E0F0;
+  box-shadow: 0px 1px 2px rgba(184, 200, 224, 0.22);
+  font-family: 'Nunito Sans', sans-serif;
+  color: #0A1629;
+  padding: 12px 18px;
+}
+
+.add-task-textarea {
+  width: 464px;
+  height: 120px;
+  font-size: 16px;
+  border-radius: 14px;
+  resize: none;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #D8E0F0;
+  box-shadow: 0px 1px 2px rgba(184, 200, 224, 0.22);
+  font-family: 'Nunito Sans', sans-serif;
+  color: #0A1629;
+  padding: 12px 18px;
+}
+
+.add-task-attach-btn {
+  margin-top: 8px;
+  margin-bottom: 0;
+  width: 200px;
+  height: 44px;
+  font-size: 16px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #F4F9FD;
+  color: #174F9A;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-task-save-btn {
+  width: 120px;
+  height: 48px;
+  font-size: 16px;
+  border-radius: 12px;
+  position: absolute;
+  right: 65px;
+  bottom: 35px;
+  margin-left: 0;
+  margin-top: 0;
+  background: #174F9A;
+  box-shadow: 0px 6px 12px rgba(63, 140, 255, 0.26);
+  border: none;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700;
+  color: #FFFFFF;
+  cursor: pointer;
+  z-index: 2;
+} 

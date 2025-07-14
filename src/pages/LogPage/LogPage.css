@@ -1,0 +1,327 @@
+/* Layout */
+.log-layout {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* Левый блок (группы) */
+.log-left_block {
+  width: 265px;
+  min-width: 265px;
+  max-width: 265px;
+  background: white;
+  border-radius: 24px;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  max-height: 592px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.log-groups-title {
+  font-family: 'Nunito Sans', NunitoSans, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 16px 0 12px 16px;
+  color: #0A1629;
+}
+.log-groups-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.log-group-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 16px;
+  border-radius: 14px;
+  gap: 4px;
+  transition: 0.2s;
+  cursor: pointer;
+  font-weight: 400;
+  background: transparent;
+}
+.log-group-item.active,
+.log-group-item:hover {
+  background: #F4F9FD;
+  transition: 0.2s;
+}
+.log-group-name {
+  padding-top: 16px;
+  color: rgba(10, 22, 41, 1);
+  font-weight: 400;
+  font-size: 16px;
+}
+.log-group-type {
+  padding-bottom: 16px;
+  color: rgba(145, 146, 158, 1);
+}
+
+/* Основной блок (календарь) */
+.log-content {
+  width: 560px;
+  min-width: 560px;
+  max-width: 560px;
+  background-color: white;
+  border-radius: 24px;
+  padding: 30px;
+  overflow-y: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.log-content-title {
+  font-family: 'Nunito Sans', NunitoSans, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  margin-bottom: 16px;
+  color: #0A1629;
+  text-align: left;
+}
+.log-calendar {
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  min-height: 320px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.log-calendar-placeholder {
+  color: #194F9A;
+  font-size: 20px;
+  opacity: 0.5;
+}
+
+/* Правый блок (информация) */
+.log-info {
+  width: 265px;
+  min-width: 265px;
+  max-width: 265px;
+  background-color: white;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.log-info-title {
+  font-family: 'Nunito Sans', NunitoSans, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 16px;
+  color: #0A1629;
+  text-align: left;
+}
+.log-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+.log-info-label {
+  font-family: 'Nunito Sans', NunitoSans, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #666;
+}
+.log-info-value {
+  font-family: 'Nunito Sans', NunitoSans, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #1a1a1a;
+  line-height: 24px;
+}
+.log-info-trainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.log-info-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  object-fit: cover;
+}
+
+/* Кастомные стили для react-calendar под макет */
+.custom-calendar,
+.react-calendar {
+  width: 488px !important;
+  max-width: 488px;
+  background: #fff;
+  border: 1px solid #D8E0F0;
+  border-radius: 14px;
+  font-family: 'Nunito Sans', NunitoSans, Arial, sans-serif;
+  box-shadow: 0 8px 32px 0 #C4CBD61A;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  height: 44px;
+  margin-bottom: 8px;
+  background: none;
+  border-radius: 14px 14px 0 0;
+  justify-content: center;
+  align-items: center;
+}
+.react-calendar__navigation button {
+  min-width: 44px;
+  background: none;
+  font-size: 20px;
+  color: #174F9A;
+  border: none;
+  cursor: pointer;
+}
+.react-calendar__navigation__label {
+  font-family: 'Nunito Sans', NunitoSans, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #0A1629;
+  text-align: center;
+}
+
+.react-calendar__month-view__weekdays {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  flex: 0 0 52px !important;
+  width: 52px !important;
+  height: 28px !important;
+  max-width: 52px !important;
+  min-width: 52px !important;
+  text-align: center;
+  color: #7D8592;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  background: #F4F9FD;
+  border-radius: 7px;
+  margin: 0 !important;
+  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box !important;
+}
+
+.react-calendar__month-view__days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px !important;
+  justify-content: flex-start !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  width: 428px !important; /* 7*52 + 6*10 */
+  box-sizing: border-box !important;
+}
+
+.react-calendar__tile {
+  flex: 0 0 52px !important;
+  width: 52px !important;
+  min-width: 52px !important;
+  max-width: 52px !important;
+  height: 52px !important;
+  min-height: 52px !important;
+  max-height: 52px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  border-radius: 12px;
+  background: none;
+  border: none;
+  text-align: center;
+  font-family: 'Nunito Sans', NunitoSans, Arial, sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  letter-spacing: 0 !important;
+  color: #0A1629 !important;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.react-calendar__tile--now {
+  background: #e0e7ef;
+  color: #174F9A;
+}
+.react-calendar__tile--active,
+.calendar-visited {
+  background: #174F9A !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+}
+.react-calendar__tile:disabled {
+  color: #B2B8C2;
+  background: none;
+  cursor: default;
+}
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #B2B8C2;
+}
+
+/* Общий стиль текста календаря */
+.react-calendar__tile,
+.react-calendar__month-view__weekdays__weekday,
+.react-calendar__navigation button {
+  font-family: 'Nunito Sans', NunitoSans, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.log-content-title,
+.log-info-title,
+.log-groups-title,
+.page-title {
+  color: #0A1629;
+  text-align: left;
+}
+
+.log-content,
+.log-info,
+.log-left_block,
+.log-info-value,
+.log-info-label,
+.log-group-name,
+.log-group-type,
+.log-groups-list,
+.log-info-section,
+.log-groups-title,
+.log-content-title,
+.log-info-title,
+.page-title {
+  text-align: left;
+}
